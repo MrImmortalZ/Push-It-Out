@@ -15,10 +15,12 @@ public class Enemy : MonoBehaviour
     public float enemySpeed = 1f;
     public float enemyRotateSpeed = 3f;
     public float waitTime = 2f;
+    Animator anim;
     // Start is called before the first frame update
     void Start()
     {
         enemyTransform = gameObject.GetComponent<Transform>();
+        anim = gameObject.GetComponent<Animator>();
 
         enemyHeight = enemyTransform.position.y;
 
@@ -32,12 +34,14 @@ public class Enemy : MonoBehaviour
     {
         if(enemyTransform.position == TargetPosition && targetChanged)
         {
+            anim.SetBool("Walk_Anim", false);
             Invoke("newTarget", waitTime);
             targetChanged = false;
         }
 
         enemyTransform.position = Vector3.MoveTowards(enemyTransform.position, TargetPosition, enemySpeed*Time.deltaTime);
         enemyTransform.rotation = Quaternion.RotateTowards(enemyTransform.rotation, finalDirection, enemyRotateSpeed * Time.deltaTime);
+        anim.SetBool("Walk_Anim", true);
     }
 
     private void newTarget()
