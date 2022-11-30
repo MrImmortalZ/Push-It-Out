@@ -18,6 +18,7 @@ public class PlayerMovement : MonoBehaviour
     public float normalHeight, crouchHeight;
     Vector3 velocity;
     bool isGrounded;
+    public Animator anim;
 
     void Update()
     {
@@ -33,16 +34,21 @@ public class PlayerMovement : MonoBehaviour
         Vector3 move = transform.right * x + transform.forward * z;
 
         controller.Move(move * speed * Time.deltaTime);
+        anim.SetFloat("Speed", Mathf.Abs(x + z));
 
         if(Input.GetButtonDown("Jump")&&isGrounded){
             velocity.y = Mathf.Sqrt(jumpHeight * -2f * gravity);
+            anim.SetBool("Jump", true);
         }
          if(Input.GetKeyDown(KeyCode.C)&&isGrounded){
             controller.height = crouchHeight;
+            anim.SetBool("Squat", true);
         }
         if(Input.GetKeyUp(KeyCode.C)){
             controller.height = normalHeight;
-         }
+        }
+
+        anim.SetBool("Jump", false);
 
         velocity.y += gravity * Time.deltaTime;
 

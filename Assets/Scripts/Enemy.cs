@@ -12,7 +12,7 @@ public class Enemy : MonoBehaviour
     private float enemyHeight;
     private bool targetChanged = true;
     public float radius = 5f;
-    private Transform player;
+    private GameObject player;
     private float dist;
     public float close;
     public float moveSpeed;
@@ -20,11 +20,13 @@ public class Enemy : MonoBehaviour
     public float enemyRotateSpeed = 3f;
     private Vector3 dir;
     public float waitTime = 2f;
+    private Animator  anim;
     // Start is called before the first frame update
     void Start()
     {
         enemyTransform = gameObject.GetComponent<Transform>();
-        player = GameObject.FindGameObjectWithTag("Player").transform;
+        player = GameObject.FindGameObjectWithTag("Player");
+        anim = gameObject.GetComponent<Animator>();
 
         enemyHeight = enemyTransform.position.y;
 
@@ -34,23 +36,24 @@ public class Enemy : MonoBehaviour
     }
 
     // Update is called once per frame
-    void Update()
+    void FixedUpdate()
     {
         if(enemyTransform.position == TargetPosition && targetChanged)
         {
             Invoke("newTarget", waitTime);
             targetChanged = false;
+            anim.SetBool("Walk_Anim", false);
+            
         }
 
-        dist = Vector3.Distance(player.position, transform.position);
-        dir = transform.position - player.position;
+        dist = Vector3.Distance(player.transform.position, transform.position);
+        dir = transform.position - player.transform.position;
+        anim.SetBool("Walk_Anim", true);
         
-        if(dist <= close){
-            // transform.LookAt(player);
-            // GetComponent<Rigidbody>().AddForce(transform.forward * moveSpeed);
-            player.position = player.position - (2 * dir);
-            // Add melee combat lines and animation
-        }
+        // if(dist <= close){
+        //     player.GetComponent<CharacterController>().SimpleMove(-1*dir.normalized*moveSpeed);
+            
+        // }
 
         enemyTransform.position = Vector3.MoveTowards(enemyTransform.position, TargetPosition, enemySpeed*Time.deltaTime);
         enemyTransform.rotation = Quaternion.RotateTowards(enemyTransform.rotation, finalDirection, enemyRotateSpeed * Time.deltaTime);
@@ -65,4 +68,21 @@ public class Enemy : MonoBehaviour
         finalDirection = Quaternion.LookRotation(direction);
         targetChanged = true;
     }
+
+    private void OnTriggerEnter(Collider other)
+    {
+        Debug.Log("Andar ghusa");
+       if(other.CompareTag("Player"))
+       {
+        Debug.Log("Player hai");
+        dir = transform.position - other.gameObject.transform.position;
+        Debug.Log(dir);
+        Debug.Log(other.gameObject.GetComponent<CharacterController>());
+        other.gameObject.GetComponent<CharacterController>().SimpleMove(-1*dir.normalized*moveSpeed);
+       }
+    }
+
+    
 }
+
+
