@@ -19,7 +19,7 @@ MonoBehaviour:
     width: 1920
     height: 1037
   m_ShowMode: 4
-  m_Title: Game
+  m_Title: Inspector
   m_RootView: {fileID: 6}
   m_MinSize: {x: 875, y: 300}
   m_MaxSize: {x: 10000, y: 10000}
@@ -45,10 +45,10 @@ MonoBehaviour:
     y: 30
     width: 1920
     height: 987
-  m_MinSize: {x: 678, y: 492}
+  m_MinSize: {x: 679, y: 492}
   m_MaxSize: {x: 14002, y: 14042}
   vertical: 0
-  controlID: -1
+  controlID: 132
 --- !u!114 &3
 MonoBehaviour:
   m_ObjectHideFlags: 52
@@ -94,8 +94,8 @@ MonoBehaviour:
     y: 0
     width: 356
     height: 713
-  m_MinSize: {x: 200, y: 200}
-  m_MaxSize: {x: 4000, y: 4000}
+  m_MinSize: {x: 201, y: 221}
+  m_MaxSize: {x: 4001, y: 4021}
   m_ActualView: {fileID: 16}
   m_Panes:
   - {fileID: 16}
@@ -223,10 +223,10 @@ MonoBehaviour:
     y: 0
     width: 1436
     height: 987
-  m_MinSize: {x: 402, y: 492}
+  m_MinSize: {x: 403, y: 492}
   m_MaxSize: {x: 10001, y: 14042}
   vertical: 1
-  controlID: 47
+  controlID: 63
 --- !u!114 &10
 MonoBehaviour:
   m_ObjectHideFlags: 52
@@ -248,10 +248,10 @@ MonoBehaviour:
     y: 0
     width: 1436
     height: 713
-  m_MinSize: {x: 402, y: 221}
-  m_MaxSize: {x: 8002, y: 4021}
+  m_MinSize: {x: 403, y: 221}
+  m_MaxSize: {x: 8003, y: 4021}
   vertical: 0
-  controlID: 48
+  controlID: 64
 --- !u!114 &11
 MonoBehaviour:
   m_ObjectHideFlags: 52
@@ -456,22 +456,22 @@ MonoBehaviour:
     m_SkipHidden: 0
     m_SearchArea: 1
     m_Folders:
-    - Assets/Materials
+    - Assets/Scripts
     m_Globs: []
     m_OriginalText: 
   m_ViewMode: 1
   m_StartGridSize: 64
   m_LastFolders:
-  - Assets/Materials
+  - Assets/Scripts
   m_LastFoldersGridSize: -1
   m_LastProjectPath: C:\Users\sarth\OneDrive\Documents\GitHub\push-it-out
   m_LockTracker:
     m_IsLocked: 0
   m_FolderTreeState:
     scrollPos: {x: 0, y: 0}
-    m_SelectedIDs: 34430000
-    m_LastClickedID: 17204
-    m_ExpandedIDs: 00000000184300001a4300001c4300001e430000204300002243000024430000264300002843000040430000c2b9000000ca9a3b
+    m_SelectedIDs: f6440000
+    m_LastClickedID: 17654
+    m_ExpandedIDs: 00000000c8440000ca440000cc440000ce440000d0440000d2440000d4440000d6440000d8440000da440000dc44000000ca9a3b
     m_RenameOverlay:
       m_UserAcceptedRename: 0
       m_Name: 
@@ -499,7 +499,7 @@ MonoBehaviour:
     scrollPos: {x: 0, y: 0}
     m_SelectedIDs: 
     m_LastClickedID: 0
-    m_ExpandedIDs: 00000000184300001a4300001c4300001e4300002043000022430000244300002643000028430000
+    m_ExpandedIDs: 00000000c8440000ca440000cc440000ce440000d0440000d2440000d4440000d6440000d8440000da440000dc440000
     m_RenameOverlay:
       m_UserAcceptedRename: 0
       m_Name: 
@@ -620,9 +620,9 @@ MonoBehaviour:
   m_SceneHierarchy:
     m_TreeViewState:
       scrollPos: {x: 0, y: 0}
-      m_SelectedIDs: 76abfdff
-      m_LastClickedID: 0
-      m_ExpandedIDs: 8abcfeff344fffff704fffffa84fffffe44fffff5850ffff9a50ffff7a7cffff74f9ffffa8f9ffffacf9ffffe4f9ffffe8f9ffff1cfaffff20faffff58faffff5cfaffff90faffff94faffffccfaffffd0fafffff0faffff00fbffff04fbffff10fbffff6cfbffff6efbffff8aed000040ef0000
+      m_SelectedIDs: 6cfbffff
+      m_LastClickedID: -1172
+      m_ExpandedIDs: 74e4ffff36faffff38fbffff68fbffff6efbffff083e0000
       m_RenameOverlay:
         m_UserAcceptedRename: 0
         m_Name: 
@@ -682,9 +682,9 @@ MonoBehaviour:
   m_PlayAudio: 0
   m_AudioPlay: 0
   m_Position:
-    m_Target: {x: -19.185009, y: -31.620995, z: 42.232418}
+    m_Target: {x: -8.568386, y: -32.047684, z: -60.04392}
     speed: 2
-    m_Value: {x: -19.185009, y: -31.620995, z: 42.232418}
+    m_Value: {x: -8.568391, y: -32.04767, z: -60.04389}
   m_RenderMode: 0
   m_CameraMode:
     drawMode: 0
@@ -731,9 +731,9 @@ MonoBehaviour:
     m_GridAxis: 1
     m_gridOpacity: 0.5
   m_Rotation:
-    m_Target: {x: 0.44479594, y: 0.13253328, z: -0.066416785, w: 0.8837446}
+    m_Target: {x: 0.001937866, y: 0.96734196, z: -0.25500712, w: 0.0072883833}
     speed: 2
-    m_Value: {x: 0.44461277, y: 0.1324787, z: -0.066389434, w: 0.88338065}
+    m_Value: {x: 0.002319405, y: 0.9669258, z: -0.2548974, w: 0.008735737}
   m_Size:
     m_Target: 51.238346
     speed: 2
