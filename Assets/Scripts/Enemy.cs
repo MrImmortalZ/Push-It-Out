@@ -12,15 +12,19 @@ public class Enemy : MonoBehaviour
     private float enemyHeight;
     private bool targetChanged = true;
     public float radius = 5f;
+    private Transform player;
+    private float dist;
+    public float close;
+    public float moveSpeed;
     public float enemySpeed = 1f;
     public float enemyRotateSpeed = 3f;
+    private Vector3 dir;
     public float waitTime = 2f;
-    Animator anim;
     // Start is called before the first frame update
     void Start()
     {
         enemyTransform = gameObject.GetComponent<Transform>();
-        anim = gameObject.GetComponent<Animator>();
+        player = GameObject.FindGameObjectWithTag("Player").transform;
 
         enemyHeight = enemyTransform.position.y;
 
@@ -34,14 +38,22 @@ public class Enemy : MonoBehaviour
     {
         if(enemyTransform.position == TargetPosition && targetChanged)
         {
-            anim.SetBool("Walk_Anim", false);
             Invoke("newTarget", waitTime);
             targetChanged = false;
         }
 
+        dist = Vector3.Distance(player.position, transform.position);
+        dir = transform.position - player.position;
+        
+        if(dist <= close){
+            // transform.LookAt(player);
+            // GetComponent<Rigidbody>().AddForce(transform.forward * moveSpeed);
+            player.position = player.position - (2 * dir);
+            // Add melee combat lines and animation
+        }
+
         enemyTransform.position = Vector3.MoveTowards(enemyTransform.position, TargetPosition, enemySpeed*Time.deltaTime);
         enemyTransform.rotation = Quaternion.RotateTowards(enemyTransform.rotation, finalDirection, enemyRotateSpeed * Time.deltaTime);
-        anim.SetBool("Walk_Anim", true);
     }
 
     private void newTarget()

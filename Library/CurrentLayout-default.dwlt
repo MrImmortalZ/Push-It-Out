@@ -21,7 +21,7 @@ MonoBehaviour:
   m_ShowMode: 4
   m_Title: Scene
   m_RootView: {fileID: 6}
-  m_MinSize: {x: 875, y: 300}
+  m_MinSize: {x: 875, y: 542}
   m_MaxSize: {x: 10000, y: 10000}
   m_Maximized: 1
 --- !u!114 &2
@@ -45,10 +45,10 @@ MonoBehaviour:
     y: 30
     width: 1920
     height: 987
-  m_MinSize: {x: 679, y: 492}
-  m_MaxSize: {x: 14002, y: 14042}
+  m_MinSize: {x: 677, y: 492}
+  m_MaxSize: {x: 14001, y: 14042}
   vertical: 0
-  controlID: 66
+  controlID: 60
 --- !u!114 &3
 MonoBehaviour:
   m_ObjectHideFlags: 52
@@ -68,8 +68,8 @@ MonoBehaviour:
     y: 0
     width: 484
     height: 987
-  m_MinSize: {x: 276, y: 71}
-  m_MaxSize: {x: 4001, y: 4021}
+  m_MinSize: {x: 275, y: 50}
+  m_MaxSize: {x: 4000, y: 4000}
   m_ActualView: {fileID: 15}
   m_Panes:
   - {fileID: 15}
@@ -94,8 +94,8 @@ MonoBehaviour:
     y: 0
     width: 356
     height: 713
-  m_MinSize: {x: 201, y: 221}
-  m_MaxSize: {x: 4001, y: 4021}
+  m_MinSize: {x: 200, y: 200}
+  m_MaxSize: {x: 4000, y: 4000}
   m_ActualView: {fileID: 16}
   m_Panes:
   - {fileID: 16}
@@ -223,10 +223,10 @@ MonoBehaviour:
     y: 0
     width: 1436
     height: 987
-  m_MinSize: {x: 403, y: 492}
+  m_MinSize: {x: 402, y: 492}
   m_MaxSize: {x: 10001, y: 14042}
   vertical: 1
-  controlID: 67
+  controlID: 113
 --- !u!114 &10
 MonoBehaviour:
   m_ObjectHideFlags: 52
@@ -248,10 +248,10 @@ MonoBehaviour:
     y: 0
     width: 1436
     height: 713
-  m_MinSize: {x: 403, y: 221}
-  m_MaxSize: {x: 8003, y: 4021}
+  m_MinSize: {x: 402, y: 221}
+  m_MaxSize: {x: 8002, y: 4021}
   vertical: 0
-  controlID: 68
+  controlID: 114
 --- !u!114 &11
 MonoBehaviour:
   m_ObjectHideFlags: 52
@@ -405,33 +405,33 @@ MonoBehaviour:
     m_SkipHidden: 0
     m_SearchArea: 1
     m_Folders:
-    - Assets/Scripts
+    - Assets/Art/RobotSphere/Assets/Models/Materials
     m_Globs: []
     m_OriginalText: 
   m_ViewMode: 1
   m_StartGridSize: 64
   m_LastFolders:
-  - Assets/Scripts
+  - Assets/Art/RobotSphere/Assets/Models/Materials
   m_LastFoldersGridSize: -1
   m_LastProjectPath: C:\Users\sarth\OneDrive\Documents\GitHub\push-it-out
   m_LockTracker:
     m_IsLocked: 0
   m_FolderTreeState:
     scrollPos: {x: 0, y: 0}
-    m_SelectedIDs: b43d0000
-    m_LastClickedID: 15796
-    m_ExpandedIDs: 00000000983d00009a3d00009c3d00009e3d0000a03d0000a23d0000a43d0000ea3d0000fc3d0000003e00003c7c0000427c000000ca9a3b
+    m_SelectedIDs: 8e600000
+    m_LastClickedID: 24718
+    m_ExpandedIDs: 0000000036420000384200003a4200003c4200003e420000404200004242000044420000664b000000ca9a3b
     m_RenameOverlay:
       m_UserAcceptedRename: 0
-      m_Name: Wheel Robot
-      m_OriginalName: Wheel Robot
+      m_Name: Art
+      m_OriginalName: Art
       m_EditFieldRect:
         serializedVersion: 2
         x: 0
         y: 0
         width: 0
         height: 0
-      m_UserData: 27944
+      m_UserData: 16976
       m_IsWaitingForDelay: 0
       m_IsRenaming: 0
       m_OriginalEventType: 0
@@ -448,7 +448,7 @@ MonoBehaviour:
     scrollPos: {x: 0, y: 0}
     m_SelectedIDs: 
     m_LastClickedID: 0
-    m_ExpandedIDs: 00000000983d00009a3d00009c3d00009e3d0000a03d0000a23d0000a43d0000
+    m_ExpandedIDs: 0000000036420000384200003a4200003c4200003e42000040420000424200004442000046420000484200004a4200004c420000
     m_RenameOverlay:
       m_UserAcceptedRename: 0
       m_Name: 
@@ -569,9 +569,9 @@ MonoBehaviour:
   m_SceneHierarchy:
     m_TreeViewState:
       scrollPos: {x: 0, y: 0}
-      m_SelectedIDs: 7cf6feff
-      m_LastClickedID: -67972
-      m_ExpandedIDs: ecfdfeff10fefeff1afefeff9601ffffd602ffffc203ffff6efbffff
+      m_SelectedIDs: 68fbfeff
+      m_LastClickedID: -66712
+      m_ExpandedIDs: 70ebfeff6cfbfeffaa66ffffea68ffff346affffc06cffff6af8ffffdef8ffff6cfbffff6a430000
       m_RenameOverlay:
         m_UserAcceptedRename: 0
         m_Name: 
@@ -631,9 +631,9 @@ MonoBehaviour:
   m_PlayAudio: 0
   m_AudioPlay: 0
   m_Position:
-    m_Target: {x: 51.910477, y: 40.659946, z: -10.028674}
+    m_Target: {x: -19.06163, y: 20.888172, z: -3.662205}
     speed: 2
-    m_Value: {x: 51.910477, y: 40.659946, z: -10.028674}
+    m_Value: {x: -19.06163, y: 20.888172, z: -3.662205}
   m_RenderMode: 0
   m_CameraMode:
     drawMode: 0
@@ -680,20 +680,20 @@ MonoBehaviour:
     m_GridAxis: 1
     m_gridOpacity: 0.5
   m_Rotation:
-    m_Target: {x: 0.3184491, y: -0.61278856, z: 0.3029031, w: 0.6569414}
+    m_Target: {x: -0.24208957, y: -0.2102184, z: 0.048944388, w: -0.9462045}
     speed: 2
-    m_Value: {x: 0.3193953, y: -0.6122593, z: 0.3037854, w: 0.6563837}
+    m_Value: {x: -0.24344796, y: -0.21009241, z: 0.04924771, w: -0.94560504}
   m_Size:
-    m_Target: 3.456422
+    m_Target: 10
     speed: 2
-    m_Value: 3.307581
+    m_Value: 10
   m_Ortho:
     m_Target: 0
     speed: 2
     m_Value: 0
   m_CameraSettings:
-    m_Speed: 1
-    m_SpeedNormalized: 0.5
+    m_Speed: 0.9875061
+    m_SpeedNormalized: 0.4934998
     m_SpeedMin: 0.001
     m_SpeedMax: 2
     m_EasingEnabled: 1
