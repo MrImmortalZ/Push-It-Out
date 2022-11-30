@@ -1,6 +1,7 @@
 using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
+using System.Threading.Tasks;
 
 public class PlayerMovement : MonoBehaviour
 {
@@ -15,12 +16,12 @@ public class PlayerMovement : MonoBehaviour
     public Transform groundCheck;
     public float groundDistance = 0.4f;
     public LayerMask groundMask;
-    public float normalHeight, crouchHeight;
+    public float normalHeight=0.93f, crouchHeight=0.4f;
     Vector3 velocity;
     bool isGrounded;
     public Animator anim;
 
-    void Update()
+  void Update()
     {
         isGrounded = Physics.CheckSphere(groundCheck.position,groundDistance,groundMask);
 
@@ -36,19 +37,22 @@ public class PlayerMovement : MonoBehaviour
         controller.Move(move * speed * Time.deltaTime);
         anim.SetFloat("Speed", Mathf.Abs(x + z));
 
-        if(Input.GetButtonDown("Jump")&&isGrounded){
+        if(Input.GetKeyDown(KeyCode.Space)&&isGrounded){
             velocity.y = Mathf.Sqrt(jumpHeight * -2f * gravity);
             anim.SetBool("Jump", true);
+           // await Task.Delay(2000);
         }
+        
          if(Input.GetKeyDown(KeyCode.C)&&isGrounded){
             controller.height = crouchHeight;
             anim.SetBool("Squat", true);
         }
         if(Input.GetKeyUp(KeyCode.C)){
             controller.height = normalHeight;
+            anim.SetBool("Squat", false);
         }
 
-        anim.SetBool("Jump", false);
+       // anim.SetBool("Jump", false);
 
         velocity.y += gravity * Time.deltaTime;
 

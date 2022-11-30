@@ -5,7 +5,7 @@ using UnityEditor;
 using UnityEngine;
 
 [CustomEditor(typeof(RobotFreeAnim))]
-public class RobotFreeAnimEditor : Editor
+public class RobotFreeAnim : Editor
 {
 	// ** Clean Old Prefs ** To remove with Next update
 	static string notificationSeenPref = "Notification.Seen";
