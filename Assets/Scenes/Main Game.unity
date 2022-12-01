@@ -38,7 +38,7 @@ RenderSettings:
   m_ReflectionIntensity: 1
   m_CustomReflection: {fileID: 0}
   m_Sun: {fileID: 705507994}
-  m_IndirectSpecularColor: {r: 0.18028378, g: 0.22571412, b: 0.30692285, a: 1}
+  m_IndirectSpecularColor: {r: 0.18028359, g: 0.22571385, b: 0.30692258, a: 1}
   m_UseRadianceAmbientProbe: 0
 --- !u!157 &3
 LightmapSettings:
@@ -2519,7 +2519,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 1727419104386146954, guid: 9e56b2762bc2e9b438c2f5387101b68a, type: 3}
       propertyPath: m_LocalPosition.y
-      value: -0.36
+      value: -0.37000072
       objectReference: {fileID: 0}
     - target: {fileID: 1727419104386146954, guid: 9e56b2762bc2e9b438c2f5387101b68a, type: 3}
       propertyPath: m_LocalPosition.z
@@ -2574,8 +2574,12 @@ PrefabInstance:
       value: 10
       objectReference: {fileID: 0}
     - target: {fileID: 8404952290352843678, guid: 9e56b2762bc2e9b438c2f5387101b68a, type: 3}
+      propertyPath: crouchHeight
+      value: 0.4
+      objectReference: {fileID: 0}
+    - target: {fileID: 8404952290352843678, guid: 9e56b2762bc2e9b438c2f5387101b68a, type: 3}
       propertyPath: normalHeight
-      value: 0
+      value: 0.93
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 9e56b2762bc2e9b438c2f5387101b68a, type: 3}
